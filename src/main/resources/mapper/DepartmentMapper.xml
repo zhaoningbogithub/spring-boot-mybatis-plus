@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.lsz.example.dataOperate.mapper.DepartmentMapper">
+
+    <select id="getDepById" resultType="cn.lsz.example.dataOperate.dto.Department">
+        SELECT * FROM department WHERE id=#{id}
+    </select>
+
+    <insert id="insertDep" keyProperty="id" useGeneratedKeys="true">
+        INSERT INTO department(department_Name) VALUES (#{departmentName})
+    </insert>
+</mapper>

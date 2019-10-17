@@ -1,0 +1,17 @@
+spring:
+  datasource:
+#   数据源基本配置
+    username: mall2
+    password: mall2
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/paascloud_uac
+
+mybatis:
+  # 指定全局配置文件位置
+  config-location: classpath:mybatis-config.xml
+  # 指定sql映射文件位置
+  mapper-locations: classpath:mapper/*.xml
+
+logging:
+    level:
+      cn.lsz.example: debug
